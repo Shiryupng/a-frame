@@ -13,10 +13,9 @@
 <body style="margin: 0; overflow: hidden;">
 
   <a-scene
-    xr-mode-ui="XRMode: ar;"
-    webxr="referenceSpaceType: local-floor;
-           requiredFeatures: local-floor;
-           optionalFeatures: hit-test;">
+      xr-mode-ui="enabled: true; XRMode: xr"
+  webxr="referenceSpaceType: local-floor;
+         optionalFeatures: hit-test, dom-overlay;">
 
     <!-- Modelo y animaciones -->
     <a-assets timeout="30000">
