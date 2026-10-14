@@ -10,7 +10,7 @@
   <body style="margin: 0; overflow: hidden;">
     <a-scene xr-mode-ui="XRMode: xr;">
         <a-assets timeout="30000">
-      <a-asset-item id="yo" src="Dancing Twerk.glb"></a-asset-item>
+      <a-asset-item id="yo" src="DancingTwerk.glb"></a-asset-item>
       </a-assets>
       
       
@@ -28,6 +28,20 @@
   animation-mixer="clip: *; loop: repeat"
 ></a-entity>
       <a-entity camera look-controls position="0 1.6 3"></a-entity>
+
+       <script>
+      const personaje = document.querySelector('#personaje');
+
+      personaje.addEventListener('model-loaded', () => {
+        console.log('MODELO CARGADO CORRECTAMENTE');
+      });
+
+      personaje.addEventListener('model-error', (e) => {
+        console.error('ERROR AL CARGAR EL MODELO:', e.detail);
+      });
+    </script>
+
+
     </a-scene>
   </body>
 </html>
