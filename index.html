@@ -23,23 +23,11 @@
 
 <a-entity
   gltf-model="#yo"
-  rotation="0 0 0"   
+  rotation="0 0 -3"   
   scale="1 1 1"
   animation-mixer="clip: *; loop: repeat"
 ></a-entity>
       <a-entity camera look-controls position="0 1.6 3"></a-entity>
-
-       <script>
-      const personaje = document.querySelector('#personaje');
-
-      personaje.addEventListener('model-loaded', () => {
-        console.log('MODELO CARGADO CORRECTAMENTE');
-      });
-
-      personaje.addEventListener('model-error', (e) => {
-        console.error('ERROR AL CARGAR EL MODELO:', e.detail);
-      });
-    </script>
 
 
     </a-scene>
